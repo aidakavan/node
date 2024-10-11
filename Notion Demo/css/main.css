@@ -1,0 +1,201 @@
+@font-face {
+    font-family: pelak ;
+    src: url(../fonts/TTF/PelakFA-Medium.ttf);
+}
+
+@font-face {
+    font-family: pelak-bold;
+    src: url(../fonts/TTF/PelakFA-Bold.ttf);
+}
+@font-face {
+    font-family: pelak-black;
+    src: url(../fonts/TTF/PelakFA-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: saad;
+    src: url(../fonts/Saad.ttf);
+}
+
+body{
+    font-family: pelak-bold;
+    background-color: #364228 ;
+    min-height: 100vh;
+}
+input{
+    font-family: pelak-bold;
+}
+
+h1{
+    font-family: saad;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* intro section css */
+
+.introSection{
+    width: 100%;
+    height: 100vh;
+    flex-direction:column;
+    display: flex;
+}
+
+.introTopSec{
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
+    background-color:#f8f8f5 ;
+    border-radius: 2rem;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.305));
+}
+
+.introTopSec h1{
+    font-family: saad;
+    font-size: 60px;
+    color:#183A37 ;
+}
+.introTopSec img{
+    width: 300px;
+    height: 300px;
+}
+.introButton{
+    height: 50px;
+    width: 280px;
+    background-color: #183A37;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: pelak-bold;
+}
+
+.introButton:hover{
+    background-color: #e1d6bc;
+    color: #183A37;
+    transition: 0.3s;
+}
+
+/* notePad Section css */
+
+.notepadHeading h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #183533;
+}
+
+.notePadSection{
+    width: 70%;
+    min-height: 90vh;
+    background-color:#fefae0;
+    display: none;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.AddNote{
+    background-color: #e1d6bc;
+    height: 50px;
+    width: 90%;
+    border-radius: 1rem;
+}
+.noteBtn{
+    width: 35px;
+    height: auto;
+    margin-left: 10px;
+}
+
+#noteinput{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 90%;
+    border-radius: 1rem;
+    padding-right: 20px;
+    background-color: transparent;
+    direction: rtl;
+    font-size: 14px;
+}
+
+
+
+/* task section css */
+
+.allTasks{
+    width: 95% ;
+    min-height: 350px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: 350px;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.taskContainer{
+    background-color: #e1d6bc;
+    border-radius: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.taskContainerTop{
+    margin-right: 10px;
+    color: #183533;
+}
+
+.newtask{
+    min-height: 40px;
+    width: 95%;
+    background-color:#f5f3dad4;
+    margin: 0 auto;
+    justify-content:right;
+    padding-right: 10px;
+    color:#000000 ;
+    border-radius: 10PX;
+    font-family: pelak-black;
+    border: #d6cebe 2px solid;
+    margin-bottom: 6px;
+
+}
+
+.newtask p{
+    margin-right: 10px;
+}
+
+
+
+/* responsive design */
+
+@media screen and (max-width:847px) {
+    .notePadSection{
+        width: 100%;
+        min-height: 100vh ;
+        border-radius: 0%;
+        background-color: #efe8d8;
+    }
+
+    .allTasks{
+        width: 95% ;
+        min-height: 350px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(1, 95%);
+        grid-template-rows: repeat(2, 330px);
+        gap: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
